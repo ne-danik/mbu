@@ -1,0 +1,283 @@
+@media screen and (max-width: $max_device_width_laptop), (max-device-width: $max_device_width_laptop) {
+  .container {
+    max-width: $device_width_laptop;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+  .header .header__text-box {
+    max-width: 260px;
+    text-align: center;
+  }
+  .header .header__text-box-text {
+    padding-bottom: 12px;
+    &::after {
+      display: none;
+    }
+  }
+  .menu {
+    display: none;
+  }
+  .menu-btn {
+    display: block;
+  }
+  .search {
+    max-width: $device_width_laptop;
+  }
+  .news .news__content-title {
+    max-width: 570px;
+    max-height: 420px;
+  }
+  .news .news__content-media {
+    max-width: 480px;
+  }
+  .news .news-bar {
+    position: static;
+  }
+  .news .news-bar__list {
+    padding-right: 0;
+    max-width: $device_width_laptop;
+    &::before {
+      -webkit-transform-origin: center;
+    }
+  }
+  .news .news__image {
+    width: 100%;
+    height: 100%;
+    max-height: 420px;
+  }
+  .teams .teams__filter {
+    gap: 8px;
+  }
+  .teams .teams__filter-btn {
+    padding: 10px 16px;
+  }
+  .questions {
+    position: static;
+  }
+  .questions-back {
+    padding-top: 0;
+  }
+  .questions .questions__inner {
+    padding-left: 0;
+    max-width: $device_width_laptop;
+    &::before {
+      -webkit-transform-origin: center;
+    }
+  }
+  .footer__content .footer__nav {
+    max-width: 480px;
+  }
+}
+
+@media screen and (max-width: $max_device_width_tablet), (max-device-width: $max_device_width_tablet) {
+  .container {
+    max-width: $device_width_tablet;
+  }
+  .header .header__bar {
+    display: none;
+  }
+  .header .header__text-box {
+    width: auto;
+    text-align: center;
+  }
+  .header .header__text-box-text {
+    display: none;
+  }
+  .header .header__nav {
+    order: -1;
+  }
+  .request-call {
+    display: block;
+    margin-left: auto;
+    justify-self: flex-end;
+  }
+  .search-btn {
+    display: none;
+  }
+  .search {
+    max-width: $device_width_tablet;
+  }
+  .news .news__content {
+    position: relative;
+  }
+  .news .news__content-media {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    max-width: 200px;
+  }
+  .news .news-bar__list-items {
+    flex-direction: column;
+  }
+  .news .news-bar__post {
+    border: none;
+    border-bottom: 1px solid #e5e5e5;
+    margin: 0 0 24px 0;
+    padding: 0 0 24px 0;
+    gap: 64px;
+  }
+  .announcement .announcement__content {
+    flex-direction: column;
+    gap: 48px;
+  }
+  .announcement .announcement__post-heading {
+    padding: 10px 0 8px;
+    font-size: 20px;
+    font-weight: 350;
+  }
+  .teams .teams__items {
+    grid-template-columns: 1fr 1fr;
+  }
+  .photos .photos__content {
+    grid-template-columns: repeat(2, minmax(auto, 50%));
+    grid-template-rows: minmax(auto, 100%) repeat(2, minmax(auto, 50%));
+  }
+  .photos .photos__post:first-child {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+  .photos .photos__post-image {
+    max-height: 400px;
+  }
+  .statistics .statistics__list {
+    flex-wrap: wrap;
+  }
+  .statistics .statistics__item {
+    flex: none;
+    width: 320px;
+    text-align: left;
+  }
+  .statistics .statistics__item-title {
+    font-size: 48px;
+    line-height: 48px;
+  }
+  .questions {
+    min-height: 212px;
+  }
+  .questions .questions__inner-text {
+    max-width: 320px;
+  }
+  .splide__arrows {
+    display: none;
+  }
+  .footer__content {
+    flex-wrap: wrap;
+    row-gap: 24px;
+  }
+  .footer__content .footer__nav {
+    max-width: 100%;
+    order: -1;
+  }
+}
+
+@media screen and (max-width: $max_device_width_mobile), (max-device-width: $max_device_width_mobile) {
+  .container {
+    max-width: $device_width_mobile;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  .restrict-btn {
+    display: none;
+    & ~ .separator {
+      display: none;
+    }
+  }
+  .header .header__logo {
+    flex-direction: column;
+  }
+  .header .header__content {
+    flex-direction: column;
+    padding-bottom: 64px;
+    row-gap: 64px;
+    text-align: center;
+  }
+  .news {
+    padding-bottom: 32px;
+  }
+  .news .news__content {
+    flex-direction: column;
+    justify-content: space-evenly;
+    max-height: none;
+  }
+  .news .news__title {
+    padding: 12px 0 24px 0;
+    font-size: 36px;
+    line-height: 48px;
+  }
+  .news .news__content-media {
+    position: static;
+    bottom: 0;
+    right: 0;
+    max-width: none;
+    order: -1;
+  }
+  .news .news__image {
+    width: auto;
+    height: auto;
+    max-width: 1200px;
+    max-height: none;
+  }
+  .announcement,
+  .teams,
+  .photos,
+  .statistics {
+    padding: 32px 0;
+  }
+  .teams .teams__items {
+    grid-template-columns: 1fr;
+  }
+  .photos .photos__content {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+  }
+  .photos .photos__post:first-child {
+    grid-row: auto;
+    grid-column: auto;
+  }
+  .photos .photos__post .photos__post-title {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .photos .photos__post::after {
+    height: 50%;
+  }
+  .statistics .statistics__list {
+    justify-content: center;
+  }
+  .statistics .statistics__item {
+    text-align: center;
+  }
+  .questions {
+    min-height: 292px;
+  }
+  .questions .questions__inner-content {
+    flex-direction: column;
+    padding-left: 0;
+    gap: 12px;
+  }
+  .questions .questions__inner-text {
+    max-width: 80%;
+  }
+  .questions .questions__inner-text::before,
+  .questions .questions__inner-text::after {
+    display: none;
+  }
+  .parents {
+    padding-top: 64px;
+    padding-bottom: 32px;
+  }
+  .footer__content {
+    padding: 32px 0;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 48px;
+  }
+  .footer__content .footer__menu-list {
+    columns: 1;
+    column-gap: normal;
+    text-align: center;
+  }
+  .footer__content .footer__menu-item:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}

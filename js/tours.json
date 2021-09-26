@@ -1,0 +1,233 @@
+[
+  {
+    "id": "2021060101",
+    "tag": "apple",
+    "name": "Антоновский",
+    "icon": "../images/icons/camp-icons/apple.png",
+    "tour": "1 смена",
+    "season": "лето 2021",
+    "days": "14",
+    "startTour": "03 июня",
+    "endTour": "16 июня"
+  },
+  {
+    "id": "2021060102",
+    "tag": "voice",
+    "name": "Звонкие голоса",
+    "icon": "../images/icons/camp-icons/voice.png",
+    "tour": "1 смена",
+    "season": "лето 2021",
+    "days": "14",
+    "startTour": "03 июня",
+    "endTour": "16 июня"
+  },
+  {
+    "id": "2021060103",
+    "tag": "emerald",
+    "name": "Изумрудный",
+    "icon": "../images/icons/camp-icons/emerald.png",
+    "tour": "1 смена",
+    "season": "лето 2021",
+    "days": "14",
+    "startTour": "03 июня",
+    "endTour": "16 июня"
+  },
+  {
+    "id": "2021060104",
+    "tag": "river",
+    "name": "Лесной ручеёк",
+    "icon": "../images/icons/camp-icons/river.png",
+    "tour": "1 смена",
+    "season": "лето 2021",
+    "days": "14",
+    "startTour": "05 июня",
+    "endTour": "18 июня"
+  },
+  {
+    "id": "2021060105",
+    "tag": "north",
+    "name": "Северянка",
+    "icon": "../images/icons/camp-icons/north.png",
+    "tour": "1 смена",
+    "season": "лето 2021",
+    "days": "14",
+    "startTour": "05 июня",
+    "endTour": "18 июня"
+  },
+  {
+    "id": "2021060106",
+    "tag": "sun",
+    "name": "Солнечный",
+    "icon": "../images/icons/camp-icons/sun.png",
+    "tour": "1 смена",
+    "season": "лето 2021",
+    "days": "14",
+    "startTour": "10 июня",
+    "endTour": "23 июня"
+  },
+  {
+    "id": "2021060107",
+    "tag": "fire",
+    "name": "Уральский огонёк",
+    "icon": "../images/icons/camp-icons/fire.png",
+    "tour": "1 смена",
+    "season": "лето 2021",
+    "days": "14",
+    "startTour": "10 июня",
+    "endTour": "23 июня"
+  },
+  {
+    "id": "2021060201",
+    "tag": "apple",
+    "name": "Антоновский",
+    "icon": "../images/icons/camp-icons/apple.png",
+    "tour": "2 смена",
+    "season": "лето 2021",
+    "days": "14",
+    "startTour": "16 июня",
+    "endTour": "29 июня"
+  },
+  {
+    "id": "2021060202",
+    "tag": "voice",
+    "name": "Звонкие голоса",
+    "icon": "../images/icons/camp-icons/voice.png",
+    "tour": "2 смена",
+    "season": "лето 2021",
+    "days": "14",
+    "startTour": "16 июня",
+    "endTour": "29 июня"
+  },
+  {
+    "id": "2021060203",
+    "tag": "emerald",
+    "name": "Изумрудный",
+    "icon": "../images/icons/camp-icons/emerald.png",
+    "tour": "2 смена",
+    "season": "лето 2021",
+    "days": "14",
+    "startTour": "16 июня",
+    "endTour": "30 июня"
+  },
+  {
+    "id": "2021060204",
+    "tag": "river",
+    "name": "Лесной ручеёк",
+    "icon": "../images/icons/camp-icons/river.png",
+    "tour": "2 смена",
+    "season": "лето 2021",
+    "days": "14",
+    "startTour": "18 июня",
+    "endTour": "01 июля"
+  },
+  {
+    "id": "2021060205",
+    "tag": "north",
+    "name": "Северянка",
+    "icon": "../images/icons/camp-icons/north.png",
+    "tour": "2 смена",
+    "season": "лето 2021",
+    "days": "14",
+    "startTour": "18 июня",
+    "endTour": "01 июля"
+  },
+  {
+    "id": "2021060206",
+    "tag": "sun",
+    "name": "Солнечный",
+    "icon": "../images/icons/camp-icons/sun.png",
+    "tour": "2 смена",
+    "season": "лето 2021",
+    "days": "14",
+    "startTour": "23 июня",
+    "endTour": "06 июля"
+  },
+  {
+    "id": "2021060207",
+    "tag": "fire",
+    "name": "Уральский огонёк",
+    "icon": "../images/icons/camp-icons/fire.png",
+    "tour": "2 смена",
+    "season": "лето 2021",
+    "days": "14",
+    "startTour": "10 июня",
+    "endTour": "06 июля"
+  },
+  {
+    "id": "2021070301",
+    "tag": "apple",
+    "name": "Антоновский",
+    "icon": "../images/icons/camp-icons/apple.png",
+    "tour": "3 смена",
+    "season": "лето 2021",
+    "days": "14",
+    "startTour": "01 июля",
+    "endTour": "14 июля"
+  },
+  {
+    "id": "2021070302",
+    "tag": "voice",
+    "name": "Звонкие голоса",
+    "icon": "../images/icons/camp-icons/voice.png",
+    "tour": "3 смена",
+    "season": "лето 2021",
+    "days": "14",
+    "startTour": "01 июля",
+    "endTour": "14 июля"
+  },
+  {
+    "id": "2021070303",
+    "tag": "emerald",
+    "name": "Изумрудный",
+    "icon": "../images/icons/camp-icons/emerald.png",
+    "tour": "3 смена",
+    "season": "лето 2021",
+    "days": "14",
+    "startTour": "01 июля",
+    "endTour": "14 июля"
+  },
+  {
+    "id": "2021070304",
+    "tag": "river",
+    "name": "Лесной ручеёк",
+    "icon": "../images/icons/camp-icons/river.png",
+    "tour": "3 смена",
+    "season": "лето 2021",
+    "days": "14",
+    "startTour": "03 июля",
+    "endTour": "16 июля"
+  },
+  {
+    "id": "2021070305",
+    "tag": "north",
+    "name": "Северянка",
+    "icon": "../images/icons/camp-icons/north.png",
+    "tour": "3 смена",
+    "season": "лето 2021",
+    "days": "14",
+    "startTour": "03 июля",
+    "endTour": "16 июля"
+  },
+  {
+    "id": "2021070306",
+    "tag": "sun",
+    "name": "Солнечный",
+    "icon": "../images/icons/camp-icons/sun.png",
+    "tour": "3 смена",
+    "season": "лето 2021",
+    "days": "14",
+    "startTour": "06 июля",
+    "endTour": "19 июля"
+  },
+  {
+    "id": "2021070307",
+    "tag": "fire",
+    "name": "Уральский огонёк",
+    "icon": "../images/icons/camp-icons/fire.png",
+    "tour": "3 смена",
+    "season": "лето 2021",
+    "days": "14",
+    "startTour": "06 июля",
+    "endTour": "19 июля"
+  }
+]
