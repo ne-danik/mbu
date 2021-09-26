@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Центр организации отдыха и оздоровления детей</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <header class="header">
+      <div class="container">
+        <div class="header__bar">
+          <address>
+            <a class="header__address" href="https://goo.gl/maps/6fRAFJANjfjD4YMo8" target="_blank">
+              622036, г. Нижний Тагил, ул. Циолковского, 34
+            </a>
+          </address>
+          <div class="contacts">
+            <a class="header__email" href="mailto:center_otdycha@mail.ru">center_otdycha@mail.ru</a>
+            <span class="header__bar-separator"></span>
+            <a class="header__phone" href="tel:+73435411338">+7 3435 41-13-38</a>
+            <a href="#" class="header__request-call">Заказать звонок</a>
+          </div>
+        </div>
+        <div class="header__content">
+          <a class="header__logo" href="#">
+            <img class="header__logo-image" src="images/logo-small.png" alt="">
+            <div class="header__logo-title">
+              <span>
+                Муниципальное Автономное Учреждение
+              </span>
+              <span class="header__logo-heading">
+                Центр организации отдыха и оздоровления детей
+              </span>
+              <span>
+                Нижний Тагил
+              </span>
+            </div>
+          </a>
+          <div class="header__text-box">
+            <p class="header__text-box-text">
+              Хотите отправить своего ребёнка
+              в детский оздоровительный лагерь?
+            </p>
+            <button class="primary-btn buy-ticket">Купить путёвку</button>
+          </div>
+        </div>
+      </div>
+      <div class="header__nav">
+        <div class="container header__nav-inner">
+          <button class="menu-btn" onclick="myFunction(this)">
+            <span class="burger-icon"></span>Меню
+          </button>
+          <nav class="menu">
+            <div class="menu__item dropdown">
+              <button class="menu__item-link menu__item-link--dropdown">Деятельность</button>
+              <div class="dropdown__content">
+                <div class="submenu__list">
+                  <div class="submenu__item">
+                    <a class="submenu__link" href="#">Об организации</a>
+                  </div>
+                  <div class="submenu__item">
+                    <a class="submenu__link" href="#">Структура и органы управления</a>
+                  </div>
+                  <div class="submenu__item">
+                    <a class="submenu__link" href="#">Документы МАУ</a>
+                  </div>
+                  <div class="submenu__item">
+                    <a class="submenu__link" href="#">Материальная база</a>
+                  </div>
+                  <div class="submenu__item">
+                    <a class="submenu__link" href="#">Финансово-хозяйственная деятельность</a>
+                  </div>
+                  <div class="submenu__item">
+                    <a class="submenu__link" href="#">Противодействие коррупции</a>
+                  </div>
+                  <div class="submenu__item">
+                    <a class="submenu__link" href="#">Новости</a>
+                  </div>
+                  <div class="submenu__item">
+                    <a class="submenu__link" href="#">Объявления</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="menu__item dropdown">
+              <button class="menu__item-link menu__item-link--dropdown">Наши лагеря</button>
+              <div class="dropdown__content">
+                <div class="tabs">
+                  <div class="tab__links">
+                    <button class="tab__link tab__link--apple active" onmouseover="openCamp(event, 'menuApple')"
+                      id="defaultOpen">
+                      Антоновский
+                    </button>
+                    <button class="tab__link tab__link--voice" onmouseover="openCamp(event, 'menuVoice')">
+                      Звонкие голоса
+                    </button>
+                    <button class="tab__link tab__link--emerald" onmouseover="openCamp(event, 'menuEmerald')">
+                      Изумрудный
+                    </button>
+                    <button class="tab__link tab__link--river" onmouseover="openCamp(event, 'menuRiver')">
+                      Лесной ручеёк
+                    </button>
+                    <button class="tab__link tab__link--north" onmouseover="openCamp(event, 'menuNorth')">
+                      Северянка
+                    </button>
+                    <button class="tab__link tab__link--sun" onmouseover="openCamp(event, 'menuSun')">
+                      Солнечный
+                    </button>
+                    <button class="tab__link tab__link--fire" onmouseover="openCamp(event, 'menuFire')">
+                      Уральский огонёк
+                    </button>
+                  </div>
+                  <div id="menuApple" class="tab__section" style="display: flex;">
+                    <div class="tab__content">
+                      <h3>Антоновский</h3>
+                    </div>
+                    <div class="tab__sidebar tab__sidebar--apple">
+                      <img src="images/content/camps-logo/apple.png" alt="">
+                      <a class="more-btn more-btn--read" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                  <div id="menuVoice" class="tab__section">
+                    <div class="tab__content">
+                      <h3>Звонкие голоса</h3>
+                    </div>
+                    <div class="tab__sidebar tab__sidebar--voice">
+                      <img src="images/content/camps-logo/voice.png" alt="">
+                      <a class="more-btn more-btn--read" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                  <div id="menuEmerald" class="tab__section">
+                    <div class="tab__content">
+                      <h3>Изумрудный</h3>
+                    </div>
+                    <div class="tab__sidebar tab__sidebar--emerald">
+                      <img src="images/content/camps-logo/emerald.png" alt="">
+                      <a class="more-btn more-btn--read" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                  <div id="menuRiver" class="tab__section">
+                    <div class="tab__content">
+                      <h3>Лесной ручеёк</h3>
+                    </div>
+                    <div class="tab__sidebar tab__sidebar--river">
+                      <img src="images/content/camps-logo/river.png" alt="">
+                      <a class="more-btn more-btn--read" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                  <div id="menuNorth" class="tab__section">
+                    <div class="tab__content">
+                      <h3>Северянка</h3>
+                    </div>
+                    <div class="tab__sidebar tab__sidebar--north">
+                      <img src="images/content/camps-logo/north.png" alt="">
+                      <a class="more-btn more-btn--read" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                  <div id="menuSun" class="tab__section">
+                    <div class="tab__content">
+                      <h3>Солнечный</h3>
+                    </div>
+                    <div class="tab__sidebar tab__sidebar--sun">
+                      <img src="images/content/camps-logo/sun.png" alt="">
+                      <a class="more-btn more-btn--read" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                  <div id="menuFire" class="tab__section">
+                    <div class="tab__content">
+                      <h3>Уральский огонёк</h3>
+                    </div>
+                    <div class="tab__sidebar tab__sidebar--fire">
+                      <img src="images/content/camps-logo/fire.png" alt="">
+                      <a class="more-btn more-btn--read" href="#">Подробнее</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="menu__item dropdown">
+              <button class="menu__item-link menu__item-link--dropdown">Детям и родителям</button>
+              <div class="dropdown__content">
+                <div class="submenu__list">
+                  <div class="submenu__item">
+                    <a class="submenu__link" href="#">Первый раз в лагерь</a>
+                  </div>
+                  <div class="submenu__item">
+                    <a class="submenu__link" href="#">Что взять с собой</a>
+                  </div>
+                  <div class="submenu__item">
+                    <a class="submenu__link" href="#">Правила в лагере</a>
+                  </div>
+                  <div class="submenu__item">
+                    <a class="submenu__link" href="#">Программы смен</a>
+                  </div>
+                  <div class="submenu__item">
+                    <a class="submenu__link" href="#">Распорядок дня</a>
+                  </div>
+                  <div class="submenu__item">
+                    <a class="submenu__link" href="#">Питание и медицина</a>
+                  </div>
+                  <div class="submenu__item">
+                    <a class="submenu__link" href="#">Памятки</a>
+                  </div>
+                  <div class="submenu__item">
+                    <a class="submenu__link" href="#">Посещение ребёнка</a>
+                  </div>
+                  <div class="submenu__item">
+                    <a class="submenu__link" href="#">Вопросы и ответы</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="menu__item">
+              <a class="menu__item-link" href="#">Организаторам отдыха</a>
+            </div>
+            <span class="separator"></span>
+            <div class="menu__item dropdown">
+              <button class="menu__item-link menu__item-link--dropdown">Сезон 2021</button>
+              <div class="dropdown__content">
+                <div class="submenu__list">
+                  <div class="submenu__item">
+                    <a class="submenu__link" href="#">Весна 2021</a>
+                  </div>
+                  <div class="submenu__item">
+                    <a class="submenu__link" href="#">Лето 2021</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+          <span class="separator"></span>
+          <button class="restrict-btn">Версия для слабовидящих</button>
+          <span class="separator"></span>
+          <button class="primary-btn primary-btn--small request-call">Заказать звонок</button>
+          <button class="search-btn" title="Поиск">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M10.0817 11.057C7.6446 13.009 4.0772 12.8553 1.81801 10.5962C-0.606005 8.17214 -0.606005 4.24203 1.81801 1.81801C4.24203 -0.606005 8.17214 -0.606004 10.5962 1.81801C12.8553 4.07719 13.009 7.64459 11.0571 10.0817L15.798 14.8226C16.0673 15.092 16.0673 15.5287 15.798 15.798C15.5287 16.0673 15.092 16.0673 14.8227 15.798L10.0817 11.057ZM2.79336 9.62081C0.908016 7.73546 0.908016 4.67871 2.79336 2.79336C4.67871 0.908016 7.73546 0.908016 9.62081 2.79336C11.5048 4.67733 11.5062 7.73097 9.62496 9.61666L9.6208 9.62079L9.61666 9.62495C7.73098 11.5062 4.67733 11.5048 2.79336 9.62081Z"
+                fill="#666666" />
+            </svg>
+          </button>
+          <div class="search">
+            <form class="search__form" action="#" name="search">
+              <input class="search__form-input" type="search" name="search" placeholder="Поиск..">
+              <button class="search__form-btn" title="Поиск">
+                Искать
+                <svg class="s-btn" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M10.0817 11.057C7.6446 13.009 4.0772 12.8553 1.81801 10.5962C-0.606005 8.17214 -0.606005 4.24203 1.81801 1.81801C4.24203 -0.606005 8.17214 -0.606004 10.5962 1.81801C12.8553 4.07719 13.009 7.64459 11.0571 10.0817L15.798 14.8226C16.0673 15.092 16.0673 15.5287 15.798 15.798C15.5287 16.0673 15.092 16.0673 14.8227 15.798L10.0817 11.057ZM2.79336 9.62081C0.908016 7.73546 0.908016 4.67871 2.79336 2.79336C4.67871 0.908016 7.73546 0.908016 9.62081 2.79336C11.5048 4.67733 11.5062 7.73097 9.62496 9.61666L9.6208 9.62079L9.61666 9.62495C7.73098 11.5062 4.67733 11.5048 2.79336 9.62081Z" />
+                </svg>
+              </button>
+            </form>
+          </div>
+          <div class="overlay"></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+
+      <section class="news">
+        <div class="news__main-image">
+          <div class="news__inner">
+            <div class="news__content container">
+              <div class="news__content-title">
+                <time class="news__date" datetime="2021-05-31 17:00">31 мая, 2021</time>
+                <h2 class="news__title">Спортивный праздник “Детская Баранча”</h2>
+                <a class="more-btn more-btn--read" href="#">Читать далее</a>
+              </div>
+              <div class="news__content-media">
+                <picture>
+                  <source srcset="images/content/main-news-img.webp" media="(max-width: 768px)">
+                  <source srcset="images/content/main-news-img.jpg">
+                  <img src="images/content/main-news-img.jpg" alt="">
+                </picture>
+              </div>
+            </div>
+          </div>
+          <picture>
+            <source srcset="images/content/zero-bg.webp" media="(max-width: 768px)">
+            <source srcset="images/content/zero-bg.jpg">
+            <img class="news__image" src="images/content/zero-bg.jpg" alt="">
+          </picture>
+        </div>
+        <div class="news-bar">
+          <div class="container">
+            <div class="news-bar__list">
+              <div class="news-bar__list-title">
+                <h3 class="title">Новости</h3>
+                <a class="all-link all-link--read" href="#">Все новости</a>
+              </div>
+              <div class="news-bar__list-items">
+                <div class="news-bar__post">
+                  <div class="news-bar__post-content">
+                    <time class="news-bar__post-date" datetime="2021-05-24 17:00">24 Мая, 2021</time>
+                    <p class="news-bar__post-title">
+                      <a href="#">Первая "Уральская Школа Вожатых"</a>
+                    </p>
+                  </div>
+                  <a class="news-bar__post-img" href="#">
+                    <picture>
+                      <source srcset="images/content/news-post-1.webp" media="(max-width: 768px)">
+                      <source srcset="images/content/news-post-1.jpg">
+                      <img src="images/content/news-post-1.jpg" alt="">
+                    </picture>
+                  </a>
+                </div>
+                <div class="news-bar__post">
+                  <div class="news-bar__post-content">
+                    <time class="news-bar__post-date" datetime="2021-03-26 17:00">26 Марта, 2021</time>
+                    <p class="news-bar__post-title">
+                      <a href="#">Это счастье! Я – вожатый!</a>
+                    </p>
+                  </div>
+                  <a class="news-bar__post-img" href="#">
+                    <picture>
+                      <source srcset="images/content/news-post-2.webp" media="(max-width: 768px)">
+                      <source srcset="images/content/news-post-2.jpg">
+                      <img src="images/content/news-post-2.jpg" alt="">
+                    </picture>
+                  </a>
+                </div>
+                <div class="news-bar__post">
+                  <div class="news-bar__post-content">
+                    <time class="news-bar__post-date" datetime="2021-02-05 17:00">5 Февраля, 2021</time>
+                    <p class="news-bar__post-title">
+                      <a href="#">Спорткруиз в ЗОЛ "Солнечный"</a>
+                    </p>
+                  </div>
+                  <a class="news-bar__post-img" href="#">
+                    <picture>
+                      <source srcset="images/content/news-post-3.webp" media="(max-width: 768px)">
+                      <source srcset="images/content/news-post-3.jpg">
+                      <img src="images/content/news-post-3.jpg" alt="">
+                    </picture>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section announcement">
+        <div class="container">
+          <div class="section__title">
+            <h3 class="title">Объявления</h3>
+            <a class="all-link all-link--read" href="#">Все объявления</a>
+          </div>
+          <div class="announcement__content">
+            <div class="announcement__post">
+              <time class="announcement__post-date" datetime="2021-04-02 17:00">2 Апреля, 2021</time>
+              <p class="announcement__post-heading">
+                <a href="#">
+                  О регистрации заявлений в электронном виде в ЗОЛ
+                </a>
+              </p>
+              <p class="announcement__post-text">
+                В срок до 5 апреля продолжается подготовка к приёму заявлений, настройка
+                информационных систем. Обращение заявителя в сроки, отличные от сроков приёма заявлений, является
+                причиной отказа в приёме документов.
+              </p>
+              <a class="more-link more-link--read" href="#">Читать далее</a>
+            </div>
+            <div class="announcement__post">
+              <time class="announcement__post-date" datetime="2021-03-19 17:00">19 Марта, 2021</time>
+              <p class="announcement__post-heading">
+                <a href="#">
+                  Информация об организации отдыха детей в период летних каникул
+                </a>
+              </p>
+              <p class="announcement__post-text">
+                Напоминаем, регистрация заявлений в загородные оздоровительные лагеря,
+                на все смены лета начинается в 08:00 06 апреля и завершится в 08:00 16 апреля.
+              </p>
+              <a class="more-link more-link--read" href="#">Читать далее</a>
+            </div>
+            <div class="announcement__post">
+              <time class="announcement__post-date" datetime="2021-02-04 17:00">4 Февраля, 2021</time>
+              <p class="announcement__post-heading">
+                <a href="#">
+                  Весенние каникулы
+                </a>
+              </p>
+              <p class="announcement__post-text">
+                В период весенних каникул загородный отдых детей будет организован в муниципальных загородных
+                оздоровительных лагерях: ЗОЛ «Уральский огонёк», ЗОЛ «Антоновский».
+              </p>
+              <a class="more-link more-link--read" href="#">Читать далее</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section teams">
+        <div class="container">
+          <div class="section__title">
+            <h3 class="title">Ближайшие смены</h3>
+            <a class="all-link all-link--read" href="#">Смотреть все</a>
+          </div>
+          <div class="teams__content">
+            <div class="teams__filter" id="teams__filter">
+              <button class="teams__filter-btn teams__filter-btn--active" onclick="filterSelection('all')">Все</button>
+              <button class="teams__filter-btn" onclick="filterSelection('apple')">Антоновский</button>
+              <button class="teams__filter-btn" onclick="filterSelection('voice')">Звонкие голоса</button>
+              <button class="teams__filter-btn" onclick="filterSelection('emerald')">Изумрудный</button>
+              <button class="teams__filter-btn" onclick="filterSelection('river')">Лесной ручеёк</button>
+              <button class="teams__filter-btn" onclick="filterSelection('north')">Северянка</button>
+              <button class="teams__filter-btn" onclick="filterSelection('sun')">Солнечный</button>
+              <button class="teams__filter-btn" onclick="filterSelection('fire')">Уральский огонёк</button>
+            </div>
+            <p class="teams__not-found">
+              Ближайших смен не найдено.
+            </p>
+            <div class="teams__items" id="tours">
+            </div>
+            <a class="more-link more-link--show" id="addMore" href="#">
+              Показать ещё
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle class="svg-dot-one" cx="2.5" cy="8" r="1.5" fill="#74B10C" />
+                <circle class="svg-dot-two" cx="8" cy="8" r="1.5" fill="#74B10C" />
+                <circle class="svg-dot-three" cx="13.5" cy="8" r="1.5" fill="#74B10C" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section photos">
+        <div class="container">
+          <div class="section__title">
+            <h3 class="title">Фоторепортажи</h3>
+            <a class="all-link all-link--read" href="#">Смотреть все</a>
+          </div>
+          <div class="photos__content">
+            <a class="photos__post" href="#">
+              <div class="photos__post-content">
+                <span class="photos__post-title">Завершилась II смена в ЗОЛ «Антоновский»</span>
+                <span class="photos__post-views" title="Просмотров: 243">243</span>
+              </div>
+              <picture>
+                <source srcset="images/content/picture-story/pic-1.webp" media="(max-width: 768px)">
+                <source srcset="images/content/picture-story/pic-1.jpg">
+                <img class="photos__post-image" src="images/content/picture-story/pic-1.jpg" alt="">
+              </picture>
+            </a>
+            <a class="photos__post" href="#">
+              <div class="photos__post-content">
+                <span class="photos__post-title">Малые олимпийские игры в «Солнечном»</span>
+                <span class="photos__post-views" title="Просмотров: 375">375</span>
+              </div>
+              <picture>
+                <source srcset="images/content/picture-story/pic-2.webp" media="(max-width: 768px)">
+                <source srcset="images/content/picture-story/pic-2.jpg">
+                <img class="photos__post-image" src="images/content/picture-story/pic-2.jpg" alt="">
+              </picture>
+            </a>
+            <a class="photos__post" href="#">
+              <div class="photos__post-content">
+                <span class="photos__post-title">Смотр отрядных уголков в «Уральском огоньке»</span>
+                <span class="photos__post-views" title="Просмотров: 724">724</span>
+              </div>
+              <picture>
+                <source srcset="images/content/picture-story/pic-3.webp" media="(max-width: 768px)">
+                <source srcset="images/content/picture-story/pic-3.jpg">
+                <img class="photos__post-image" src="images/content/picture-story/pic-3.jpg" alt="">
+              </picture>
+            </a>
+            <a class="photos__post" href="#">
+              <div class="photos__post-content">
+                <span class="photos__post-title">Праздник «Пусть исполняются мечты» в «Лесном ручейке»</span>
+                <span class="photos__post-views" title="Просмотров: 1086">1.1К</span>
+              </div>
+              <picture>
+                <source srcset="images/content/picture-story/pic-4.webp" media="(max-width: 768px)">
+                <source srcset="images/content/picture-story/pic-4.jpg">
+                <img class="photos__post-image" src="images/content/picture-story/pic-4.jpg" alt="">
+              </picture>
+            </a>
+            <a class="photos__post" href="#">
+              <div class="photos__post-content">
+                <span class="photos__post-title">Весенние каникулы в «Изумрудном»</span>
+                <span class="photos__post-views" title="Просмотров: 9863">10К</span>
+              </div>
+              <picture>
+                <source srcset="images/content/picture-story/pic-5.webp" media="(max-width: 768px)">
+                <source srcset="images/content/picture-story/pic-5.jpg">
+                <img class="photos__post-image" src="images/content/picture-story/pic-5.jpg" alt="">
+              </picture>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <div class="section statistics">
+        <div class="container">
+          <div class="statistics__list">
+            <div class="statistics__item">
+              <span class="statistics__item-title">2006</span>
+              <p>Год основания организации</p>
+            </div>
+            <div class="statistics__item">
+              <span class="statistics__item-title">7</span>
+              <p>Загородных оздоровительных лагерей</p>
+            </div>
+            <div class="statistics__item">
+              <span class="statistics__item-title">595</span>
+              <p>Сотрудников ЗОЛ</p>
+            </div>
+            <div class="statistics__item">
+              <span class="statistics__item-title">105160</span>
+              <p>Отдохнувших детей</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="questions-back">
+        <aside class="questions">
+          <div class="container">
+            <div class="questions__inner">
+              <p class="questions__inner-title">Остались вопросы?</p>
+              <div class="questions__inner-content">
+                <p class="questions__inner-text">
+                  Подробно расскажем о наших лагерях, проконсультируем по вопросам получения путёвки и подготовим
+                  индивидуальное предложение для коллективов!
+                </p>
+                <button class="more-btn">Задать вопрос</button>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <section class="section parents">
+        <div class="container">
+          <div class="section__title">
+            <h3 class="title">Что говорят родители</h3>
+          </div>
+
+          <div class="review splide">
+
+            <div class="splide__arrows">
+              <button class="splide__arrow splide__arrow--prev">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.00006 5L16.0001 12L9.00006 19" stroke="#666666" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+              <button class="splide__arrow splide__arrow--next">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M9.00006 5L16.0001 12L9.00006 19" stroke="#666666" stroke-width="1.8" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <img class="review__userpic" src="images/content/userpic.jpg">
+                  <div class="review__title">
+                    <span class="review__name">Марина Е.</span>
+                    <span class="review__camp">Отзыв о ЗОЛ Уральский огонёк</span>
+                  </div>
+                  <p class="review__content">
+                    Моим детям очень понравилось, ни одного плохого воспоминания, только позитив и заряд энергии!
+                    Спасибо большое всем вожатым, обслуживающему персоналу, за их ответственную работу, отзывчивость,
+                    доброту и внимание к детям!
+                  </p>
+                </li>
+                <li class="splide__slide">
+                  <img class="review__userpic" src="images/content/userpic.jpg">
+                  <div class="review__title">
+                    <span class="review__name">Марина Е.</span>
+                    <span class="review__camp">Отзыв о ЗОЛ Уральский огонёк</span>
+                  </div>
+                  <p class="review__content">
+                    Моим детям очень понравилось, ни одного плохого воспоминания, только позитив и заряд энергии!
+                    Спасибо большое всем вожатым, обслуживающему персоналу, за их ответственную работу, отзывчивость,
+                    доброту и внимание к детям!
+                  </p>
+                </li>
+                <li class="splide__slide">
+                  <img class="review__userpic" src="images/content/userpic.jpg">
+                  <div class="review__title">
+                    <span class="review__name">Марина Е.</span>
+                    <span class="review__camp">Отзыв о ЗОЛ Уральский огонёк</span>
+                  </div>
+                  <p class="review__content">
+                    Моим детям очень понравилось, ни одного плохого воспоминания, только позитив и заряд энергии!
+                    Спасибо большое всем вожатым, обслуживающему персоналу, за их ответственную работу, отзывчивость,
+                    доброту и внимание к детям!
+                  </p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 
+      <section class="section useful-info">
+        <div class="container">
+          <div class="section__title">
+            <h3 class="title">Полезная информация</h3>
+          </div>
+        </div>
+      </section>
+     -->
+
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <div class="footer__address">
+          <p class="footer__address-location">
+            г. Нижний Тагил,<br />ул. Циолковского, 34
+          </p>
+          <a class="small-btn" href="#">Схема проезда</a>
+        </div>
+        <nav class="footer__nav">
+          <ul class="footer__menu-list">
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">Главная страница</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">Об организации</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">Купить путевку</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">Родителям</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">Вожатым</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">Вакансии</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">Новости</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">Объявления</a>
+            </li>
+            <li class="footer__menu-item">
+              <a class="footer__menu-link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <ul class="social">
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="social__icon" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24ZM25.2555 31.8761C25.2555 31.8761 25.7175 31.8257 25.9541 31.5762C26.1707 31.3476 26.1632 30.9162 26.1632 30.9162C26.1632 30.9162 26.1344 28.9018 27.0873 28.6043C28.0264 28.3118 29.2321 30.5524 30.5118 31.414C31.4784 32.0654 32.2121 31.9228 32.2121 31.9228L35.6316 31.8761C35.6316 31.8761 37.4196 31.7679 36.5719 30.3877C36.5018 30.2746 36.0773 29.3664 34.0302 27.5006C31.8853 25.5477 32.1733 25.8635 34.7551 22.4849C36.3278 20.4274 36.9563 19.1713 36.7597 18.6343C36.5732 18.1205 35.4162 18.2569 35.4162 18.2569L31.5673 18.2803C31.5673 18.2803 31.2818 18.2422 31.0702 18.3663C30.8636 18.488 30.7296 18.7719 30.7296 18.7719C30.7296 18.7719 30.1211 20.3635 29.3085 21.7179C27.5944 24.5743 26.9095 24.7254 26.629 24.5485C25.9767 24.1343 26.1394 22.8868 26.1394 22.0006C26.1394 19.2316 26.5677 18.0775 25.3068 17.7788C24.8886 17.6793 24.5806 17.6141 23.51 17.6031C22.1365 17.5896 20.9745 17.608 20.3159 17.9239C19.8777 18.134 19.5396 18.6035 19.7462 18.6306C20.0004 18.6637 20.5764 18.783 20.8819 19.191C21.2763 19.7183 21.2625 20.9006 21.2625 20.9006C21.2625 20.9006 21.4892 24.1601 20.7329 24.5644C20.2145 24.8422 19.5033 24.2756 17.9745 21.6835C17.192 20.3562 16.601 18.8887 16.601 18.8887C16.601 18.8887 16.487 18.6146 16.2829 18.4671C16.0363 18.2889 15.6919 18.2336 15.6919 18.2336L12.0346 18.2569C12.0346 18.2569 11.4849 18.2717 11.2833 18.5064C11.1043 18.7141 11.2695 19.1455 11.2695 19.1455C11.2695 19.1455 14.1331 25.7222 17.376 29.037C20.3497 32.0752 23.7254 31.8761 23.7254 31.8761H25.2555Z" />
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="social__icon" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24ZM23.9837 24.3853C27.5228 24.3853 30.3996 21.6079 30.3996 18.1936C30.3996 14.7781 27.5228 12 23.9837 12C20.4454 12 17.5678 14.7781 17.5678 18.1936C17.5678 21.6079 20.4454 24.3853 23.9837 24.3853ZM26.596 29.4403C27.902 29.1531 29.1615 28.6543 30.3216 27.951C31.1995 27.4167 31.464 26.2964 30.9109 25.449C30.3581 24.5996 29.1983 24.344 28.3189 24.8783C25.6908 26.4736 22.3072 26.4732 19.6806 24.8783C18.8011 24.344 17.641 24.5996 17.0894 25.449C16.5362 26.2972 16.7999 27.4167 17.6779 27.951C18.838 28.6536 20.0975 29.1531 21.4035 29.4403L17.8164 32.9028C17.0832 33.6114 17.0832 34.7601 17.8172 35.4686C18.1846 35.8225 18.6652 35.9996 19.1458 35.9996C19.6272 35.9996 20.1086 35.8225 20.476 35.4686L23.9993 32.0661L27.5257 35.4686C28.259 36.1771 29.4486 36.1771 30.1826 35.4686C30.9174 34.7601 30.9174 33.6106 30.1826 32.9028L26.596 29.4403Z" />
+                <path class="social__icon" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M23.9837 15.6297C25.4486 15.6297 26.6402 16.7795 26.6402 18.1936C26.6402 19.6065 25.4486 20.7571 23.9837 20.7571C22.5199 20.7571 21.3272 19.6065 21.3272 18.1936C21.3272 16.7795 22.5199 15.6297 23.9837 15.6297Z" />
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="social__icon" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24ZM24.0012 11.2C20.5249 11.2 20.0886 11.2152 18.7233 11.2773C17.3606 11.3397 16.4305 11.5555 15.6166 11.872C14.7747 12.1989 14.0606 12.6363 13.3491 13.348C12.6371 14.0595 12.1997 14.7736 11.8717 15.6152C11.5544 16.4294 11.3384 17.3598 11.2771 18.7219C11.216 20.0873 11.2 20.5238 11.2 24.0001C11.2 27.4764 11.2155 27.9114 11.2773 29.2767C11.34 30.6394 11.5557 31.5695 11.872 32.3834C12.1992 33.2253 12.6365 33.9394 13.3483 34.6509C14.0595 35.3629 14.7736 35.8013 15.615 36.1283C16.4294 36.4448 17.3598 36.6605 18.7222 36.7229C20.0876 36.7851 20.5236 36.8003 23.9996 36.8003C27.4762 36.8003 27.9111 36.7851 29.2765 36.7229C30.6391 36.6605 31.5703 36.4448 32.3848 36.1283C33.2264 35.8013 33.9394 35.3629 34.6506 34.6509C35.3626 33.9394 35.8 33.2253 36.128 32.3837C36.4427 31.5695 36.6587 30.6391 36.7227 29.277C36.784 27.9116 36.8 27.4764 36.8 24.0001C36.8 20.5238 36.784 20.0876 36.7227 18.7222C36.6587 17.3595 36.4427 16.4294 36.128 15.6155C35.8 14.7736 35.3626 14.0595 34.6506 13.348C33.9386 12.636 33.2266 12.1987 32.384 11.872C31.5679 11.5555 30.6373 11.3397 29.2746 11.2773C27.9092 11.2152 27.4746 11.2 23.9972 11.2H24.0012Z" />
+                <path class="social__icon" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M22.8529 13.5067C23.1937 13.5062 23.574 13.5067 24.0012 13.5067C27.4188 13.5067 27.8239 13.519 29.1735 13.5803C30.4215 13.6374 31.0989 13.8459 31.5501 14.0211C32.1474 14.2531 32.5733 14.5304 33.021 14.9784C33.469 15.4264 33.7464 15.8531 33.9789 16.4505C34.1541 16.9011 34.3629 17.5785 34.4197 18.8265C34.481 20.1758 34.4944 20.5812 34.4944 23.9972C34.4944 27.4132 34.481 27.8186 34.4197 29.1679C34.3626 30.4159 34.1541 31.0933 33.9789 31.5439C33.7469 32.1413 33.469 32.5666 33.021 33.0144C32.573 33.4624 32.1477 33.7397 31.5501 33.9717C31.0994 34.1477 30.4215 34.3557 29.1735 34.4128C27.8242 34.4741 27.4188 34.4874 24.0012 34.4874C20.5833 34.4874 20.1782 34.4741 18.8289 34.4128C17.5809 34.3552 16.9035 34.1466 16.4521 33.9714C15.8547 33.7394 15.428 33.4621 14.98 33.0141C14.532 32.5661 14.2547 32.1405 14.0222 31.5429C13.847 31.0922 13.6382 30.4149 13.5814 29.1669C13.52 27.8175 13.5078 27.4122 13.5078 23.994C13.5078 20.5758 13.52 20.1726 13.5814 18.8233C13.6384 17.5753 13.847 16.8979 14.0222 16.4467C14.2542 15.8494 14.532 15.4227 14.98 14.9747C15.428 14.5267 15.8547 14.2494 16.4521 14.0168C16.9033 13.8408 17.5809 13.6328 18.8289 13.5755C20.0097 13.5222 20.4673 13.5062 22.8529 13.5035V13.5067ZM30.8338 15.632C29.9858 15.632 29.2978 16.3193 29.2978 17.1675C29.2978 18.0155 29.9858 18.7035 30.8338 18.7035C31.6818 18.7035 32.3698 18.0155 32.3698 17.1675C32.3698 16.3195 31.6818 15.632 30.8338 15.632ZM24.0012 17.4267C20.371 17.4267 17.4278 20.37 17.4278 24.0001C17.4278 27.6303 20.371 30.5722 24.0012 30.5722C27.6314 30.5722 30.5735 27.6303 30.5735 24.0001C30.5735 20.37 27.6314 17.4267 24.0012 17.4267Z" />
+                <path class="social__icon" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M24.0012 19.7334C26.3575 19.7334 28.2679 21.6436 28.2679 24.0001C28.2679 26.3564 26.3575 28.2668 24.0012 28.2668C21.6446 28.2668 19.7345 26.3564 19.7345 24.0001C19.7345 21.6436 21.6446 19.7334 24.0012 19.7334Z" />
+              </svg>
+            </a>
+          </li>
+          <li class="social__item">
+            <a class="social__link" href="#">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="social__icon" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24ZM36.265 18.0732C35.9706 16.9422 35.1031 16.0516 34.0016 15.7493C32.0054 15.2 24 15.2 24 15.2C24 15.2 15.9946 15.2 13.9983 15.7493C12.8967 16.0516 12.0292 16.9422 11.7348 18.0732C11.2 20.123 11.2 24.4 11.2 24.4C11.2 24.4 11.2 28.6768 11.7348 30.7268C12.0292 31.8578 12.8967 32.7484 13.9983 33.0508C15.9946 33.6 24 33.6 24 33.6C24 33.6 32.0054 33.6 34.0016 33.0508C35.1031 32.7484 35.9706 31.8578 36.265 30.7268C36.8 28.6768 36.8 24.4 36.8 24.4C36.8 24.4 36.8 20.123 36.265 18.0732Z" />
+                <path class="social__icon" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M21.6001 28.8V20.8L28.0001 24.8001L21.6001 28.8Z" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="copyright">
+        © 2021 Центр Организации Отдыха и Оздоровления Детей, все права защищены. |
+        <a class="privacy" href="#">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
