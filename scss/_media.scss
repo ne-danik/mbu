@@ -17,10 +17,10 @@
   .menu {
     display: none;
   }
-  .menu-btn {
+  .burger-btn {
     display: block;
   }
-  .search {
+  .header__nav-search {
     max-width: $device_width_laptop;
   }
   .news .news__content-title {
@@ -94,11 +94,17 @@
   .search-btn {
     display: none;
   }
-  .search {
+  .header__nav-search {
     max-width: $device_width_tablet;
+  }
+  .burger-menu__footer {
+    display: flex;
   }
   .news .news__content {
     position: relative;
+  }
+  .header__burger-menu .burger-item {
+    display: none;
   }
   .news .news__content-media {
     position: absolute;
@@ -176,7 +182,7 @@
     margin: 0 auto;
     padding: 0 15px;
   }
-  .restrict-btn {
+  .restrict-btn--header-nav {
     display: none;
     & ~ .separator {
       display: none;
@@ -184,12 +190,24 @@
   }
   .header .header__logo {
     flex-direction: column;
+    gap: 48px;
+  }
+  .header .header__logo-image {
+    max-width: 160px;
+    max-height: 160px;
   }
   .header .header__content {
     flex-direction: column;
     padding-bottom: 64px;
     row-gap: 64px;
     text-align: center;
+  }
+  .header__burger-menu {
+    position: fixed;
+    height: calc(100vh - 48px);
+  }
+  .header__burger-menu .burger-item {
+    display: block;
   }
   .news {
     padding-bottom: 32px;
@@ -222,6 +240,12 @@
   .photos,
   .statistics {
     padding: 32px 0;
+  }
+  .teams .teams__filter {
+    gap: 6px;
+  }
+  .teams .teams__filter-btn {
+    padding: 8px 12px;
   }
   .teams .teams__items {
     grid-template-columns: 1fr;

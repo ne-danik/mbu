@@ -80,8 +80,9 @@
     color: $color-dark-m;
   }
   .header__logo-image {
-    width: 100px;
-    height: 100px;
+    max-width: 100px;
+    max-height: 100px;
+    transition: all 0.3s;
   }
   .header__logo-title {
     display: flex;
@@ -125,13 +126,23 @@
     width: 100%;
     background-color: $color-light-xl;
     box-shadow: -1px 0 0 1px $color-light-m;
-    z-index: 9;
   }
   .header__nav-inner {
     display: flex;
     align-items: center;
     gap: 24px;
-
+  }
+  .header__nav-search {
+    display: none;
+    position: absolute;
+    content: "";
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: $device_width_desktop;
+    width: 100%;
+    z-index: 9;
   }
   .separator {
     display: block;
@@ -228,116 +239,6 @@
     &:hover {
       text-decoration: underline;
     }
-  }
-}
-.restrict-btn {
-  position: relative;
-  padding: 14px 0 13px 24px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  &::before {
-    position: absolute;
-    content: "";
-    top: 50%;
-    left: 0;
-    width: 16px;
-    height: 16px;
-    background-image: url(../images/icons/eye.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    transform: translateY(-50%);
-  }
-  &:hover {
-    color: $color-secondary;
-  }
-}
-.request-call {
-  display: none;
-	color: $color-dark-l;
-	background-color: $color-light-m;
-	box-shadow: none;
-	&:hover {
-		box-shadow: none;
-	}
-  &:focus {
-    color: $color-light-m;
-    background-color: $color-dark-l;
-	}
-}
-.search-btn {
-  margin-left: auto;
-  justify-self: flex-end;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-.search {
-  display: none;
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  padding: 0 15px;
-  max-width: $device_width_desktop;
-  width: 100%;
-  height: 100%;
-  z-index: 9;
-  .search__form {
-    position: relative;
-    display: flex;
-    align-items: center;
-    border-radius: 50px;
-    height: 100%;
-  }
-  .search__form-input {
-    margin: 0;
-    padding: 12px 125px 12px 25px;
-    outline: none;
-    border: none;
-    border-top-left-radius: 50px;
-    border-bottom-left-radius: 50px;
-    background-color: $color-light-xl;
-    width: calc(100% - 25px);
-    font-size: 18px;
-    line-height: 18px;
-    font-weight: 350;
-    &:hover {
-      box-shadow: 0px 12px 24px -14px rgba($color-light-xl, 0.5);
-    }
-    &:focus {
-      box-shadow: 0px 12px 24px -12px rgba($color-light-xl, 1);
-    }
-  }
-  .search__form-btn {
-    position: absolute;
-    content: "";
-    top: 0;
-    right: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    gap: 12px;
-    padding: 0 25px;
-    height: 100%;
-    min-width: 50px;
-    max-height: 50px;
-    border: none;
-    border-radius: 50px;
-    background-color: $color-primary;
-    color: $color-light-xl;
-    cursor: pointer;
-  }
-  .s-btn {
-    fill: $color-light-xl;
   }
 }
 
@@ -494,81 +395,75 @@
   }
 }
 
-.menu-btn {
+.header__burger-menu {
   display: none;
-  position: relative;
-  padding: 20px 24px 16px;
-  border: none;
-  background-color: transparent;
-  font-size: 12px;
-  line-height: 12px;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: 0.15s;
-  &:hover {
-    color: $color-secondary;
-    .burger-icon,
-    .burger-icon::before,
-    .burger-icon::after {
-      background-color: $color-secondary;
-    }
-    &::before,
-    &::after {
-      background: $color-secondary;
-      transform: rotate(-45deg);
-    }
-    &::after {
-      transform: rotate(45deg);
-    }
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  border-top: 1px solid $color-light-m;
+  border-bottom: 1px solid $color-light-m;
+  background-color: $color-light-xl;
+  height: auto;
+  width: 100%;
+  box-shadow: 0px 14px 24px -14px rgba($color-dark-xl, 0.24);
+  visibility: visible;
+  overflow: hidden;
+  z-index: 7;
+  .burger-menu__items {
+    overflow: hidden;
+    overflow-y: auto;
   }
-  .burger-icon {
-    position: relative;
+  .burger-menu__item-link {
     display: inline-block;
-    margin: 0px 10px 4px 2px;
-    width: 12px;
-    height: 1px;
-    background-color: $color-dark-m;
+    padding: 15px 30px;
+    border: none;
+    outline: none;
+    background-color: $color-light-xl;
+    color: $color-dark-l;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.4s;
   }
-  .burger-icon::before,
-  .burger-icon::after {
-    position: absolute;
+  .sub-menu:after {
+    content: "+";
+    margin-left: 5px;
+    float: right;
+  }
+  .sub-menu__items {
+    padding: 0 48px;
+    max-height: 0;
+    overflow: hidden;
+    box-shadow: inset 0 -1px 0 0 $color-light-m;
+    transition: max-height 0.2s ease-out;
+  }
+  .sub-menu__item-link {
     display: inline-block;
-    width: 12px;
-    height: 1px;
-    margin: 3px 0;
-    background-color: $color-dark-m;
-    transition: 0.15s;
+    padding: 15px;
+    width: 100%;
+    color: $color-dark-l;
   }
-  .burger-icon::before,
-  .burger-icon::after {
-    content: "";
-    left: 0;
-    bottom: 0;
+  .active {
+    background-color: $color-dark-l;
+    color: $color-light-xl;
   }
-  .burger-icon::after {
-    top: 0;
+  .active:after {
+    content: "-";
+    color: $color-light-xl;
   }
-  .change::before,
-  .change::after {
-    margin: 5px 0;
-  }
-  &::before,
-  &::after {
-    display: inline-block;
-    position: absolute;
-    content: "";
-    top: 50%;
-    right: 6px;
-    width: 6px;
-    height: 1px;
-    backface-visibility: hidden;
-    background: $color-dark-m;
-    transform: rotate(45deg);
-    transition: width 0.2s, transform 0.2s;
-  }
-  &::after {
-    right: 2px;
-    transform: rotate(-45deg);
+  .burger-item {
+    padding: 5px 15px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: $color-dark-l;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.4s;
   }
 }
 
