@@ -84,7 +84,13 @@
     display: none;
   }
   .header .header__nav {
+    height: 48px;
     order: -1;
+  }
+  .header__nav-inner {
+    position: absolute;
+    top: 0;
+    width: 100%;
   }
   .request-call {
     display: block;
@@ -204,7 +210,7 @@
   }
   .header__burger-menu {
     position: fixed;
-    height: calc(100vh - 48px);
+    height: calc(100% - 48px);
   }
   .header__burger-menu .burger-item {
     display: block;

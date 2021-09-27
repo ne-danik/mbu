@@ -107,8 +107,14 @@ function openBurgerMenu(elem) {
   const burgerMenu = document.querySelector('.header__burger-menu');
   if (burgerMenu.style.display === "flex") {
     burgerMenu.style.display = "none";
+    if (window.matchMedia("(max-width: 767px)").matches) {
+      searchForm.parentNode.style.position = 'static';
+    }
   } else {
     burgerMenu.style.display = "flex";
+    if (window.matchMedia("(max-width: 767px)").matches) {
+      searchForm.parentNode.style.position = 'fixed';
+    }
   }
   elem.childNodes[1].classList.toggle("change");
 }
