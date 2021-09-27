@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Центр организации отдыха и оздоровления детей</title>
+  <link rel="icon" src="favicon.ico">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -29,7 +30,10 @@
         </div>
         <div class="header__content">
           <a class="header__logo" href="#">
-            <img class="header__logo-image" src="images/logo-small.png" alt="">
+            <picture>
+              <source srcset="images/logo-small.png" media="(min-width: 768px)">
+              <img class="header__logo-image" src="images/logo.png" alt="">
+            </picture>
             <div class="header__logo-title">
               <span>
                 Муниципальное Автономное Учреждение
@@ -53,7 +57,7 @@
       </div>
       <div class="header__nav">
         <div class="container header__nav-inner">
-          <button class="menu-btn" onclick="myFunction(this)">
+          <button class="burger-btn" onclick="openBurgerMenu(this)">
             <span class="burger-icon"></span>Меню
           </button>
           <nav class="menu">
@@ -235,7 +239,10 @@
             </div>
           </nav>
           <span class="separator"></span>
-          <button class="restrict-btn">Версия для слабовидящих</button>
+          <button class="restrict-btn restrict-btn--header-nav">
+            <span class="restrict-icon"></span>
+            Версия для слабовидящих
+          </button>
           <span class="separator"></span>
           <button class="primary-btn primary-btn--small request-call">Заказать звонок</button>
           <button class="search-btn" title="Поиск">
@@ -245,12 +252,12 @@
                 fill="#666666" />
             </svg>
           </button>
-          <div class="search">
-            <form class="search__form" action="#" name="search">
-              <input class="search__form-input" type="search" name="search" placeholder="Поиск..">
-              <button class="search__form-btn" title="Поиск">
-                Искать
-                <svg class="s-btn" width="16" height="16" viewBox="0 0 16 16" fill="none"
+          <div class="header__nav-search">
+            <form class="search-form" action="#" name="search">
+              <input class="search-form__input" type="search" name="search" placeholder="Поиск..">
+              <button class="search-form__btn" title="Искать">
+                <span class="search-form__input-label">Искать</span>
+                <svg class="search-form__btn-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M10.0817 11.057C7.6446 13.009 4.0772 12.8553 1.81801 10.5962C-0.606005 8.17214 -0.606005 4.24203 1.81801 1.81801C4.24203 -0.606005 8.17214 -0.606004 10.5962 1.81801C12.8553 4.07719 13.009 7.64459 11.0571 10.0817L15.798 14.8226C16.0673 15.092 16.0673 15.5287 15.798 15.798C15.5287 16.0673 15.092 16.0673 14.8227 15.798L10.0817 11.057ZM2.79336 9.62081C0.908016 7.73546 0.908016 4.67871 2.79336 2.79336C4.67871 0.908016 7.73546 0.908016 9.62081 2.79336C11.5048 4.67733 11.5062 7.73097 9.62496 9.61666L9.6208 9.62079L9.61666 9.62495C7.73098 11.5062 4.67733 11.5048 2.79336 9.62081Z" />
@@ -258,8 +265,133 @@
               </button>
             </form>
           </div>
-          <div class="overlay"></div>
         </div>
+
+        <div class="header__burger-menu">
+          <ul class="burger-menu__items">
+            <li class="burger-menu__item">
+              <button class="burger-menu__item-link sub-menu">Деятельность</button>
+              <div class="sub-menu__items">
+                <div class="sub-menu__item">
+                  <a class="sub-menu__item-link" href="#">Об организации</a>
+                </div>
+                <div class="sub-menu__item">
+                  <a class="sub-menu__item-link" href="#">Структура и органы управления</a>
+                </div>
+                <div class="sub-menu__item">
+                  <a class="sub-menu__item-link" href="#">Документы МАУ</a>
+                </div>
+                <div class="sub-menu__item">
+                  <a class="sub-menu__item-link" href="#">Материальная база</a>
+                </div>
+                <div class="sub-menu__item">
+                  <a class="sub-menu__item-link" href="#">Финансово-хозяйственная деятельность</a>
+                </div>
+                <div class="sub-menu__item">
+                  <a class="sub-menu__item-link" href="#">Противодействие коррупции</a>
+                </div>
+                <div class="sub-menu__item">
+                  <a class="sub-menu__item-link" href="#">Новости</a>
+                </div>
+                <div class="sub-menu__item">
+                  <a class="sub-menu__item-link" href="#">Объявления</a>
+                </div>
+              </div>
+            </li>
+            <li class="burger-menu__item">
+              <button class="burger-menu__item-link sub-menu">Наши лагеря</button>
+              <div class="sub-menu__items">
+                <div class="sub-menu__item">
+                  <a class="sub-menu__item-link" href="#">Антоновский</a>
+                </div>
+                <div class="sub-menu__item">
+                  <a class="sub-menu__item-link" href="#">Звонкие голоса</a>
+                </div>
+                <div class="sub-menu__item">
+                  <a class="sub-menu__item-link" href="#">Изумрудный</a>
+                </div>
+                <div class="sub-menu__item">
+                  <a class="sub-menu__item-link" href="#">Лесной ручеёк</a>
+                </div>
+                <div class="sub-menu__item">
+                  <a class="sub-menu__item-link" href="#">Северянка</a>
+                </div>
+                <div class="sub-menu__item">
+                  <a class="sub-menu__item-link" href="#">Солнечный</a>
+                </div>
+                <div class="sub-menu__item">
+                  <a class="sub-menu__item-link" href="#">Уральский огонёк</a>
+                </div>
+              </div>
+            </li>
+            <li class="burger-menu__item">
+              <button class="burger-menu__item-link sub-menu">Детям и родителям</button>
+              <div class="sub-menu__items">
+                <div class="sub-menu__item">
+                  <a class="sub-menu__item-link" href="#">Первый раз в лагерь</a>
+                </div>
+                <div class="sub-menu__item">
+                  <a class="sub-menu__item-link" href="#">Что взять с собой</a>
+                </div>
+                <div class="sub-menu__item">
+                  <a class="sub-menu__item-link" href="#">Правила в лагере</a>
+                </div>
+                <div class="sub-menu__item">
+                  <a class="sub-menu__item-link" href="#">Программы смен</a>
+                </div>
+                <div class="sub-menu__item">
+                  <a class="sub-menu__item-link" href="#">Распорядок дня</a>
+                </div>
+                <div class="sub-menu__item">
+                  <a class="sub-menu__item-link" href="#">Питание и медицина</a>
+                </div>
+                <div class="sub-menu__item">
+                  <a class="sub-menu__item-link" href="#">Памятки</a>
+                </div>
+                <div class="sub-menu__item">
+                  <a class="sub-menu__item-link" href="#">Посещение ребёнка</a>
+                </div>
+                <div class="sub-menu__item">
+                  <a class="sub-menu__item-link" href="#">Вопросы и ответы</a>
+                </div>
+              </div>
+            </li>
+            <li class="burger-menu__item">
+              <a class="burger-menu__item-link" href="#">Организаторам отдыха</a>
+            </li>
+            <li class="burger-menu__item">
+              <button class="burger-menu__item-link sub-menu">Сезон 2021</button>
+              <div class="sub-menu__items">
+                <div class="sub-menu__item">
+                  <a class="sub-menu__item-link" href="#">Весна 2021</a>
+                </div>
+                <div class="sub-menu__item">
+                  <a class="sub-menu__item-link" href="#">Лето 2021</a>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="burger-menu__footer">
+            <div class="burger-item">
+              <button class="restrict-btn restrict-btn--burger-menu">
+                <span class="restrict-icon"></span>
+                Версия для слабовидящих
+              </button>
+            </div>
+            <form class="search-form" action="#" name="search">
+              <input class="search-form__input" type="search" name="search" placeholder="Поиск..">
+              <button class="search-form__btn search-form__btn--icon" title="Искать">
+                <svg class="search-form__btn-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M10.0817 11.057C7.6446 13.009 4.0772 12.8553 1.81801 10.5962C-0.606005 8.17214 -0.606005 4.24203 1.81801 1.81801C4.24203 -0.606005 8.17214 -0.606004 10.5962 1.81801C12.8553 4.07719 13.009 7.64459 11.0571 10.0817L15.798 14.8226C16.0673 15.092 16.0673 15.5287 15.798 15.798C15.5287 16.0673 15.092 16.0673 14.8227 15.798L10.0817 11.057ZM2.79336 9.62081C0.908016 7.73546 0.908016 4.67871 2.79336 2.79336C4.67871 0.908016 7.73546 0.908016 9.62081 2.79336C11.5048 4.67733 11.5062 7.73097 9.62496 9.61666L9.6208 9.62079L9.61666 9.62495C7.73098 11.5062 4.67733 11.5048 2.79336 9.62081Z" />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+
       </div>
     </header>
 
@@ -565,7 +697,11 @@
             <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide">
-                  <img class="review__userpic" src="images/content/userpic.jpg">
+                  <picture>
+                    <source srcset="images/content/userpic.webp" media="(max-width: 1024px)">
+                    <source srcset="images/content/userpic.jpg">
+                    <img class="review__userpic" src="images/content/userpic.jpg" alt="">
+                  </picture>
                   <div class="review__title">
                     <span class="review__name">Марина Е.</span>
                     <span class="review__camp">Отзыв о ЗОЛ Уральский огонёк</span>
@@ -577,7 +713,11 @@
                   </p>
                 </li>
                 <li class="splide__slide">
-                  <img class="review__userpic" src="images/content/userpic.jpg">
+                  <picture>
+                    <source srcset="images/content/userpic.webp" media="(max-width: 1024px)">
+                    <source srcset="images/content/userpic.jpg">
+                    <img class="review__userpic" src="images/content/userpic.jpg" alt="">
+                  </picture>
                   <div class="review__title">
                     <span class="review__name">Марина Е.</span>
                     <span class="review__camp">Отзыв о ЗОЛ Уральский огонёк</span>
@@ -589,7 +729,11 @@
                   </p>
                 </li>
                 <li class="splide__slide">
-                  <img class="review__userpic" src="images/content/userpic.jpg">
+                  <picture>
+                    <source srcset="images/content/userpic.webp" media="(max-width: 1024px)">
+                    <source srcset="images/content/userpic.jpg">
+                    <img class="review__userpic" src="images/content/userpic.jpg" alt="">
+                  </picture>
                   <div class="review__title">
                     <span class="review__name">Марина Е.</span>
                     <span class="review__camp">Отзыв о ЗОЛ Уральский огонёк</span>
@@ -708,6 +852,7 @@
       </div>
     </div>
   </footer>
+  <div class="overlay"></div>
 
   <script src="js/main.min.js"></script>
 </body>

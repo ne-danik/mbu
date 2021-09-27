@@ -56,9 +56,23 @@ addMore.addEventListener('click', function () {
 });
 
 
+const subMenu = document.getElementsByClassName("sub-menu");
+for (let i = 0; i < subMenu.length; i++) {
+  subMenu[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    const items = this.nextElementSibling;
+    if (items.style.maxHeight) {
+      items.style.maxHeight = null;
+    } else {
+      items.style.maxHeight = items.scrollHeight + "px";
+    }
+  });
+}
+
+
 const body = document.querySelector('body');
 const overlay = document.querySelector('.overlay');
-const searchForm = document.querySelector('.search');
+const searchForm = document.querySelector('.header__nav-search');
 const openSearchFormBtn = document.querySelector('.search-btn');
 
 //Show orevlay
@@ -89,8 +103,14 @@ document.addEventListener('click', (event) => {
 });
 
 
-function myFunction(x) {
-  x.childNodes[1].classList.toggle("change");
+function openBurgerMenu(elem) {
+  const burgerMenu = document.querySelector('.header__burger-menu');
+  if (burgerMenu.style.display === "flex") {
+    burgerMenu.style.display = "none";
+  } else {
+    burgerMenu.style.display = "flex";
+  }
+  elem.childNodes[1].classList.toggle("change");
 }
 
 
@@ -178,9 +198,9 @@ new Splide('.review', {
   width: '620px',
   height: '130px',
   breakpoints: {
-		767: {
-			width: '345px',
+    767: {
+      width: '345px',
       height: 'auto',
-		},
-	}
+    },
+  }
 }).mount();

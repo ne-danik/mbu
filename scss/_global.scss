@@ -1,7 +1,7 @@
 html,
 body {
 	position: fixed;
-  width: 100%;
+	width: 100%;
 	height: 100%;
 	font-family: "Circe", sans-serif;
 	font-weight: normal;
@@ -60,6 +60,63 @@ select {
 	color: $color-dark-l;
 }
 
+.search-form {
+	display: flex;
+	align-items: center;
+	border: 2px solid $color-light-xl;
+	border-radius: 50px;
+	background-color: $color-light-xl;
+	.search-form__input {
+		margin: 0;
+		padding: 7px 7px 7px 18px;
+		outline: none;
+		border: none;
+		border-top-left-radius: 50px;
+		border-bottom-left-radius: 50px;
+		background-color: transparent;
+		width: 100%;
+		font-size: 16px;
+		line-height: 16px;
+		font-weight: 350;
+		&::placeholder {
+			font-style: italic;
+		}
+	}
+	.search-form__btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 0 25px;
+		gap: 12px;
+		width: 100%;
+		min-width: 37px;
+		max-width: max-content;
+		height: 37px;
+		border: none;
+		border-radius: 50px;
+		background-color: $color-primary;
+		color: $color-light-xl;
+		cursor: pointer;
+	}
+	.search-form__btn--icon{
+		padding: 0;
+	}
+	.search-form__btn-icon {
+		width: 16px;
+		height: 16px;
+		fill: $color-light-xl;
+	}
+}
+
+.burger-menu__footer {
+	display: none;
+	flex-direction: column;
+	gap: 15px;
+	padding: 15px 15px;
+	width: 100%;
+	background-color: $color-light-m;
+}
+
 .overlay {
 	position: fixed;
 	top: 0;
@@ -71,6 +128,10 @@ select {
 	transition: opacity 0.3s;
 	z-index: 8;
 }
+
+/*
+		B U T T O N S
+*/
 
 .primary-btn {
 	padding: 16px 32px;
@@ -96,7 +157,7 @@ select {
 	line-height: 14px;
 }
 
-.small-btn{
+.small-btn {
 	display: inline-block;
 	padding: 6px 12px;
 	border: none;
@@ -204,7 +265,6 @@ select {
 		}
 	}
 }
-
 @keyframes dots {
 	0% {
 		transform: translateY(0);
@@ -221,4 +281,102 @@ select {
 	100% {
 		transform: translateY(0);
 	}
+}
+
+.burger-btn {
+	display: none;
+	position: relative;
+	padding: 20px 0 16px;
+	border: none;
+	background-color: transparent;
+	color: $color-dark-l;
+	font-size: 12px;
+	line-height: 12px;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: 0.15s;
+	.burger-icon {
+		position: relative;
+		display: inline-block;
+		margin: 0px 10px 4px 2px;
+		width: 12px;
+		height: 1px;
+		background-color: $color-dark-l;
+	}
+	.burger-icon::before,
+	.burger-icon::after {
+		position: absolute;
+		display: inline-block;
+		width: 12px;
+		height: 1px;
+		margin: 4px 0;
+		background-color: $color-dark-l;
+		transition: 0.15s;
+	}
+	.burger-icon::before {
+		content: "";
+		left: 0;
+		bottom: 0;
+	}
+	.burger-icon::after {
+		content: "";
+		left: 0;
+		top: 0;
+	}
+	.change {
+		height: 0;
+		&::before,
+		&::after {
+			transform: rotate(-45deg);
+			bottom: -4px;
+		}
+		&::after {
+			transform: rotate(45deg);
+			top: -5px;
+		}
+	}
+}
+
+.restrict-btn {
+	display: flex;
+	align-items: center;
+	padding: 0;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	.restrict-icon {
+		padding-right: 28px;
+		width: 16px;
+		height: 16px;
+		background-image: url(../images/icons/eye.svg);
+		background-repeat: no-repeat;
+		background-position: left center;
+	}
+}
+
+.request-call {
+	display: none;
+	color: $color-dark-l;
+	background-color: $color-light-m;
+	box-shadow: none;
+	&:hover {
+		box-shadow: none;
+	}
+	&:focus {
+		color: $color-light-m;
+		background-color: $color-dark-l;
+	}
+}
+
+.search-btn {
+	margin-left: auto;
+	justify-self: flex-end;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
 }
