@@ -108,11 +108,13 @@ function openBurgerMenu(elem) {
   if (burgerMenu.style.display === "flex") {
     burgerMenu.style.display = "none";
     if (window.matchMedia("(max-width: 767px)").matches) {
+      body.style.overflow = '';
       searchForm.parentNode.style.position = 'static';
     }
   } else {
     burgerMenu.style.display = "flex";
     if (window.matchMedia("(max-width: 767px)").matches) {
+      body.style.overflow = 'hidden';
       searchForm.parentNode.style.position = 'fixed';
     }
   }
