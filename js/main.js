@@ -21,11 +21,65 @@ fetch(url).then(function (response) {
   }
 } */
 
-const addMore = document.querySelector('#addMore');
-const tour = document.querySelector("#tours");
-let index = 0;
+const body = document.querySelector('body');
+const overlay = document.querySelector('.overlay');
+const searchForm = document.querySelector('.header__nav-search');
+
+
+//Show orevlay
+const showOverlay = () => {
+  overlay.style.opacity = '1';
+  overlay.style.height = '100%';
+}
+
+//Hide overlay
+const hideOverlay = () => {
+  overlay.style.opacity = '0';
+  overlay.style.height = '0';
+}
+
+
+document.addEventListener('click', event => {
+  event.preventDefault();
+
+  const currentTarget = event.target;
+  const btn = currentTarget.dataset.btn;
+
+  switch (btn) {
+    case 'showMore': // Show more tours
+      createTours(toursList);
+      break;
+
+    case 'searchFormBtn': // Open search form
+      showOverlay();
+      body.style.overflow = 'hidden';
+      searchForm.style.display = 'block';
+      break;
+
+    case 'subMenuItem': // Hide|Show submenu links in mobile menu
+      const items = currentTarget.nextElementSibling;
+      currentTarget.classList.toggle("active");
+      if (items.style.maxHeight) {
+        items.style.maxHeight = null;
+      } else {
+        items.style.maxHeight = items.scrollHeight + "px";
+      }
+      break;
+  }
+
+  // Close search form
+  if (event.target === overlay) {
+    searchForm.style.display = 'none';
+    body.style.overflow = '';
+    hideOverlay();
+  }
+})
+
 
 createTours = (data) => {
+  const tour = document.querySelector("#tours");
+  let index = 0;
+  const addMore = document.querySelector('#addMore');
   let currentIndex = 0;
   for (; index < (index + (6 - currentIndex));) {
     if (index < data.length) {
@@ -51,59 +105,8 @@ createTours = (data) => {
   }
 }
 
-addMore.addEventListener('click', function () {
-  createTours(toursList);
-});
 
-
-const subMenu = document.getElementsByClassName("sub-menu");
-for (let i = 0; i < subMenu.length; i++) {
-  subMenu[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    const items = this.nextElementSibling;
-    if (items.style.maxHeight) {
-      items.style.maxHeight = null;
-    } else {
-      items.style.maxHeight = items.scrollHeight + "px";
-    }
-  });
-}
-
-
-const body = document.querySelector('body');
-const overlay = document.querySelector('.overlay');
-const searchForm = document.querySelector('.header__nav-search');
-const openSearchFormBtn = document.querySelector('.search-btn');
-
-//Show orevlay
-const showOverlay = () => {
-  overlay.style.opacity = '1';
-  overlay.style.height = '100%';
-}
-//Hide overlay
-const hideOverlay = () => {
-  overlay.style.opacity = '0';
-  overlay.style.height = '0';
-}
-
-
-//Open search form
-openSearchFormBtn.addEventListener('click', function () {
-  showOverlay();
-  body.style.overflow = 'hidden';
-  searchForm.style.display = 'block';
-})
-//Close search form
-document.addEventListener('click', (event) => {
-  if (event.target === overlay) {
-    searchForm.style.display = 'none';
-    body.style.overflow = '';
-    hideOverlay();
-  }
-});
-
-
-function openBurgerMenu(elem) {
+const openBurgerMenu = (elem) => {
   const burgerMenu = document.querySelector('.header__burger-menu');
   if (burgerMenu.style.display === "flex") {
     burgerMenu.style.display = "none";
@@ -122,7 +125,7 @@ function openBurgerMenu(elem) {
 }
 
 
-function openCamp(evt, campName) {
+const openCamp = (evt, campName) => {
   let i, tabsection, tablinks;
   tabsection = document.getElementsByClassName("tab__section");
   for (i = 0; i < tabsection.length; i++) {
@@ -135,6 +138,7 @@ function openCamp(evt, campName) {
   document.getElementById(campName).style.display = "flex";
   evt.currentTarget.className += " active";
 }
+
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 
@@ -149,6 +153,7 @@ function filterSelection(c) {
     if (teamsItem[i].className.indexOf(c) > -1) showFiltered(teamsItem[i], "show");
   }
 }
+
 // Show filtered elements
 function showFiltered(element, name) {
   let i, arr1, arr2;
@@ -160,6 +165,7 @@ function showFiltered(element, name) {
     }
   }
 }
+
 // Hide elements that are not selected
 function hideFiltered(element, name) {
   let i, arr1, arr2;
@@ -172,6 +178,7 @@ function hideFiltered(element, name) {
   }
   element.className = arr1.join(" ");
 }
+
 // Add active class to the current control button
 let btnContainer = document.getElementById("teams__filter");
 let btns = btnContainer.getElementsByClassName("teams__filter-btn");
