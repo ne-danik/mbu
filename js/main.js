@@ -211,11 +211,10 @@ new Splide('.review', {
   perPage: 1,
   perMove: 1,
   width: '620px',
-  height: '130px',
+  height: 'auto',
   breakpoints: {
-    767: {
-      width: '345px',
-      height: 'auto',
+    1023: {
+      width: '100%',
     },
   }
 }).mount();

@@ -412,7 +412,6 @@
   box-shadow: 0px 14px 24px -14px rgba($color-dark-xl, 0.24);
   overflow-y: auto;
   z-index: 7;
-
   .burger-menu__items {
     overflow: hidden;
     overflow-y: auto;
@@ -429,10 +428,26 @@
     cursor: pointer;
     transition: 0.4s;
   }
-  .sub-menu:after {
-    content: "+";
-    margin-left: 5px;
-    float: right;
+  .sub-menu {
+    position: relative;
+    &::before,
+    &::after {
+      display: inline-block;
+      position: absolute;
+      content: "";
+      top: 50%;
+      right: 35px;
+      width: 7px;
+      height: 1px;
+      backface-visibility: hidden;
+      background: $color-dark-m;
+      transform: rotate(45deg);
+      transition: width 0.2s, transform 0.2s;
+    }
+    &::after {
+      right: 30px;
+      transform: rotate(-45deg);
+    }
   }
   .sub-menu__items {
     padding: 0 48px;
@@ -450,10 +465,14 @@
   .active {
     background-color: $color-dark-l;
     color: $color-light-xl;
-  }
-  .active:after {
-    content: "-";
-    color: $color-light-xl;
+    &::before,
+    &::after {
+      background: $color-light-xl;
+      transform: rotate(-45deg);
+    }
+    &::after {
+      transform: rotate(45deg);
+    }
   }
   .burger-item {
     padding: 5px 15px;
