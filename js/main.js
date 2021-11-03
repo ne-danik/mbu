@@ -1,8 +1,7 @@
-
 let url = 'js/tours.json';
 let toursList = [];
 fetch(url).then(function (response) {
-  return response.json()
+  return response.json();
 }).then(function (data) {
   createTours(data);
   toursList = data;
@@ -30,20 +29,20 @@ const searchForm = document.querySelector('.header__nav-search');
 const showOverlay = () => {
   overlay.style.opacity = '1';
   overlay.style.height = '100%';
-}
+};
 
 //Hide overlay
 const hideOverlay = () => {
   overlay.style.opacity = '0';
   overlay.style.height = '0';
-}
+};
 
 
 document.addEventListener('click', event => {
   event.preventDefault();
 
-  const currentTarget = event.target;
-  const btn = currentTarget.dataset.btn;
+  const target = event.target;
+  const btn = target.dataset.btn;
 
   switch (btn) {
     case 'showMore': // Show more tours
@@ -57,8 +56,8 @@ document.addEventListener('click', event => {
       break;
 
     case 'subMenuItem': // Hide|Show submenu links in mobile menu
-      const items = currentTarget.nextElementSibling;
-      currentTarget.classList.toggle("active");
+      const items = target.nextElementSibling;
+      target.classList.toggle("active");
       if (items.style.maxHeight) {
         items.style.maxHeight = null;
       } else {
@@ -73,37 +72,46 @@ document.addEventListener('click', event => {
     body.style.overflow = '';
     hideOverlay();
   }
-})
+});
 
+let tour = document.querySelector("#tours");
+const notFound = document.querySelector('.teams__not-found');
+const addMore = document.querySelector('#addMore');
 
-createTours = (data) => {
-  const tour = document.querySelector("#tours");
-  let index = 0;
-  const addMore = document.querySelector('#addMore');
+let createTours = (data) => {
+  let idx = 0;
   let currentIndex = 0;
-  for (; index < (index + (6 - currentIndex));) {
-    if (index < data.length) {
+
+  for (; idx < (idx + (6 - currentIndex));) {
+    if (idx < data.length) {
+      notFound.style.display = 'none';
+      addMore.style.display = 'flex';
+
       tour.innerHTML += `
-        <a class="teams__item ${data[index].tag} show" id="${data[index].id}" href="#">
-          <span class="teams__item-days">${data[index].days} дней</span>
-          <span class="teams__item-camp teams__item-camp--${data[index].tag}">${data[index].name}</span>
-          <span class="teams__item-team">${data[index].tour} ${data[index].season}</span>
-         <span class="teams__item-date">${data[index].startTour} - ${data[index].endTour}</span>
+        <a class="teams__item ${data[idx].tag} show" id="${data[idx].id}" href="#">
+          <span class="teams__item-days">${data[idx].days} дней</span>
+          <span class="teams__item-camp teams__item-camp--${data[idx].tag}">${data[idx].name}</span>
+          <span class="teams__item-team">${data[idx].tour} ${data[idx].season}</span>
+         <span class="teams__item-date">${data[idx].startTour} - ${data[idx].endTour}</span>
         </a>`;
       currentIndex++;
-      index += 1;
+      idx += 1;
+
     } else if (data.length == 0) {
-      document.querySelector('.teams__not-found').style.display = 'block';
+      notFound.style.display = 'block';
       addMore.style.display = 'none';
-      return
-    } else if (index == data.length) {
+      return;
+
+    } else if (idx == data.length) {
+      notFound.style.display = 'none';
       addMore.style.display = 'none';
-      return
+      return;
+
     } else {
-      return
+      return;
     }
   }
-}
+};
 
 
 const openBurgerMenu = (elem) => {
@@ -122,7 +130,7 @@ const openBurgerMenu = (elem) => {
     }
   }
   elem.childNodes[1].classList.toggle("change");
-}
+};
 
 
 const openCamp = (evt, campName) => {
@@ -137,53 +145,20 @@ const openCamp = (evt, campName) => {
   }
   document.getElementById(campName).style.display = "flex";
   evt.currentTarget.className += " active";
-}
+};
+
 
 // Get the element with id="defaultOpen" and click on it
 document.getElementById("defaultOpen").click();
 
 
-filterSelection("all");
-function filterSelection(c) {
-  let teamsItem;
-  teamsItem = document.getElementsByClassName("teams__item");
-  if (c == "all") c = "";
-  for (let i = 0; i < teamsItem.length; i++) {
-    hideFiltered(teamsItem[i], "show");
-    if (teamsItem[i].className.indexOf(c) > -1) showFiltered(teamsItem[i], "show");
-  }
-}
-
-// Show filtered elements
-function showFiltered(element, name) {
-  let i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {
-      element.className += " " + arr2[i];
-    }
-  }
-}
-
-// Hide elements that are not selected
-function hideFiltered(element, name) {
-  let i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);
-    }
-  }
-  element.className = arr1.join(" ");
-}
-
 // Add active class to the current control button
-let btnContainer = document.getElementById("teams__filter");
-let btns = btnContainer.getElementsByClassName("teams__filter-btn");
-for (let i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("mousedown", function () {
+
+const tabsBtnContainer = document.querySelector("#teams__filter");
+const tabsBtn = tabsBtnContainer.querySelectorAll(".teams__filter-btn");
+
+for (let i = 0; i < tabsBtn.length; i++) {
+  tabsBtn[i].addEventListener("mousedown", function () {
     if (!this.className.includes("teams__filter-btn--active")) {
       this.className += " teams__filter-btn--focus";
     }
@@ -194,7 +169,7 @@ for (let i = 0; i < btns.length; i++) {
       }
     });
   });
-  btns[i].addEventListener("mouseup", function () {
+  tabsBtn[i].addEventListener("mouseup", function () {
     let prevMousedown = document.getElementsByClassName("teams__filter-btn--focus");
     if (this.className.includes("teams__filter-btn--focus" || prevMousedown[0] != "undefined")) {
       prevMousedown[0].className = prevMousedown[0].className.replace(" teams__filter-btn--focus", "");
@@ -204,6 +179,32 @@ for (let i = 0; i < btns.length; i++) {
     this.className += " teams__filter-btn--active";
   });
 }
+
+tabsBtnContainer.addEventListener("click", (event) => {
+  const target = event.target;
+
+  if (target && target.classList.contains('teams__filter-btn')) {
+    tour.innerHTML = "";
+
+    if (target.textContent != "Все") {
+      let results = [];
+
+      for (let i = 0; i < toursList.length; i++) {
+        for (let key in toursList[i]) {
+          if (toursList[i][key].indexOf(target.textContent) != -1) {
+            results.push(toursList[i]);
+          }
+        }
+      }
+      createTours(results);
+    } else {
+      createTours(toursList);
+    }
+  }
+});
+
+
+
 
 
 new Splide('.review', {
